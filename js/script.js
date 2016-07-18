@@ -18,12 +18,15 @@ function loadData() {
   var cityStr = $('#city').val();
   var address = streetStr + ', ' + cityStr;
   $greeting.text('So you want to live at '+ address + '?');
-  var streetViewUrl = 'http://maps.googleapis.com/maps/api/streetview?size=600x400&location=' + address + '';
+  var streetViewUrl = 'http://maps.googleapis.com/maps/api/streetview?' +
+                      'size=600x400&location=' + address + '';
   $body.append('<img class="bgimg" src="' + streetViewUrl + '">');
 
   // NEW YORK TIMES AJAX REQUEST
   var nytArticleApiKey = '73ab354a5a8949f68092bd129e01edbe';
-  var nyTimesUrl = 'https://api.nytimes.com/svc/search/v2/articlesearch.json?q=' + cityStr + '&sort=newest&api-key=' + nytArticleApiKey + '';
+  var nyTimesUrl = 'https://api.nytimes.com/svc/search/v2/articlesearch.json?' +
+                   'q=' + cityStr +
+                   '&sort=newest&api-key=' + nytArticleApiKey + '';
   $.getJSON(nyTimesUrl, function(data) {
     // set header for New York Times articles
     $nytHeaderElem.text('New York Times articles about ' + cityStr +'.');
@@ -40,8 +43,7 @@ function loadData() {
       );
     };
     // Eror handler chained to handle errors in getting NYT articles
-  }).fail(function(e)
-      {
+  }).fail(function(e) {
         $nytHeaderElem.text(
           'New York Times articles could not be loaded.'
         );
@@ -56,13 +58,14 @@ function loadData() {
   }, 8000);
 
   // main Wikipedia request handler
-  var wikiUrl = 'https://en.wikipedia.org/w/api.php?action=opensearch&search='+ cityStr +'&format=json&callback=wikiCallback'
+  var wikiUrl = 'https://en.wikipedia.org/w/api.php?' +
+                'action=opensearch&search='+ cityStr +
+                '&format=json&callback=wikiCallback';
   $.ajax({
     url: wikiUrl,
     dataType: "jsonp"
     // success handler must be chained due to use of jsonp
-  }).done(function(response)
-      {
+  }).done(function(response) {
         var articleList = response[1];
         // loop through the articles added them to a list
         for (var i = 0; i < articleList.length; i++) {

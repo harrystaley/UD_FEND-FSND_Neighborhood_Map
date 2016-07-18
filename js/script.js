@@ -38,7 +38,14 @@ function loadData() {
         '</li>'
       );
     };
-  });
+    // Eror handler chained to handle errors in getting NYT articles
+  }).fail(function(error)
+      {
+        $nytHeaderElem.text(
+          'New York Times articles could not be loaded.'
+        );
+      }
+    );
 
   return false;
 };

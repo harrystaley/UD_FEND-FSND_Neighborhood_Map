@@ -3,6 +3,7 @@ function loadData() {
 
   // The leading $ denotes that the variable is a pointer to a JQuery object
   var $body = $('body');
+  var $wikiHaederElem = $('#wikipedia-header');
   var $wikiElem = $('#wikipedia-links');
   var $nytHeaderElem = $('#nytimes-header');
   var $nytElem = $('#nytimes-articles');
@@ -39,11 +40,35 @@ function loadData() {
       );
     };
     // Eror handler chained to handle errors in getting NYT articles
-  }).fail(function(error)
+  }).fail(function(e)
       {
         $nytHeaderElem.text(
           'New York Times articles could not be loaded.'
         );
+      }
+    );
+
+  // Wikipedia AJAX Request
+  var wikiUrl = 'https://en.wikipedia.org/w/api.php?action=opensearch&search='+ cityStr +'&format=json&callback=wikiCallback'
+  $.ajax({
+    url: wikiUrl,
+    dataType: "jsonp"
+    // success handler must be chained due to use of jsonp
+  }).done(function(response)
+      {
+        var articleList = response[1];
+        // loop through the articles added them to a list
+        for (var i = 0; i < articleList.length; i++) {
+          // defines an individual article in the list.
+          var articleStr = articleList[i];
+          // URL for the individual article
+          var url = 'http://en.wikipedia.org/wiki/' + articleStr;
+          $wikiElem.append(
+            '<li class="article">' +
+              '<a href="' + url + '">' + articleStr + '</a>' +
+            '</li>'
+          );
+        };
       }
     );
 

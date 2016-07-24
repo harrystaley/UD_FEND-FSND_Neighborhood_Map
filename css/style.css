@@ -1,5 +1,36 @@
-* {box-sizing:border-box;}
-body {background-color: #CCC;}
+/* custom CSS created by Harry Staley for Project 2 of Udacity Nanodeegree */
+body,
+div,
+ul,
+li,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
+  font-family: "ubuntu", sans-serif;
+}
+
+/* padding for top fixed navbar */
+body {
+    background-color: #CCC;
+    /* padding for top fixed navbar */
+    padding-top: 70px;
+}
+
+.clear-fix {
+  overflow: auto;
+}
+
+.left-nav {
+    margin-left: 10px;
+    padding: 10px;
+    color: white;
+}
 
 .bgimg {
     position:fixed;
@@ -42,4 +73,210 @@ body {background-color: #CCC;}
 }
 .article:first-child {
     border-top:none;
+}
+
+h1 {
+  font-size: 40px;
+  color: #f5a623;
+  line-height: 48px;
+  display: inline;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 24px;
+  color: #999;
+  line-height: 29px;
+  padding: 10px;
+}
+
+h3 {
+  font-style: italic;
+  font-size: 20px;
+  color: #000;
+  line-height: 22px;
+}
+
+h4 {
+  font-weight: bold;
+  font-size: 14px;
+  color: #4a4a4a;
+  line-height: 17px;
+}
+
+h2,
+h3,
+h4,
+h5 {
+  padding: 10px 5%;
+}
+
+.date-text {
+  font-style: italic;
+  font-size: 14px;
+  color: #999;
+  line-height: 16px;
+  float: left;
+}
+
+.location-text {
+  font-style: italic;
+  font-size: 14px;
+  color: #999;
+  line-height: 16px;
+  float: right;
+}
+
+p {
+  font-size: 14px;
+  color: #333;
+  line-height: 21px;
+}
+
+a {
+  color: #1199c3;
+  text-decoration: none;
+  margin-top: 10px;
+  display: block;
+}
+
+.welcome-message {
+  font-style: italic;
+  font-size: 18px;
+  color: #f3f3f3;
+  line-height: 28px;
+}
+
+#skills-h3 {
+  color: #f5ae23;
+  display: block;
+}
+
+.orange {
+  background-color: #f5ae23;
+}
+
+.orange-text {
+  color: #f5ae23;
+}
+
+.white-text {
+  font-weight: bold;
+  color: #fff;
+}
+
+.gray {
+  background-color: #f3f3f3;
+  padding-bottom: 10px;
+  clear: both;
+}
+
+.dark-gray {
+  background-color: #4a4a4a;
+}
+
+.dark-blue {
+  background-color: #294860;
+}
+
+.flex-box {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.center-content {
+  padding: 2.5% 5%;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.biopic {
+  border: 1px solid white;
+}
+
+img {
+  float: left;
+  display: block;
+  margin: 10px;
+  -webkit-border-radius: 2.5%;
+  -moz-border-radius: 2.5%;
+  border-radius: 2.5%;
+}
+
+span {
+  padding: 5px;
+}
+
+#lets-connect {
+  text-align: center;
+}
+
+/* custom navbar button to match inverse style in bootstrap navbar */
+
+.navbar-btn {
+  background-color: #222;
+  border-color: #333;
+  color: #999;
+}
+
+.navbar-btn:hover {
+  color: #fff;
+  background-color: #333;
+}
+
+/* Media queries to handle various device widths */
+
+@media only screen and (max-width: 1024px) {
+  #lets-connect {
+    margin-top: 5%;
+  }
+
+  .biopic,
+  img {
+    width: 200px;
+  };
+}
+
+@media only screen and (max-width:900px) {
+  .biopic,
+  img {
+    width: 175px;
+  };
+}
+
+@media only screen and (max-width: 750px) {
+  #lets-connect {
+    margin-top: 10%;
+  }
+
+  .biopic,
+  img {
+    width: 150px;
+  };
+}
+
+#map {
+  display: block;
+  height: 100%;
+}
+
+#mapDiv {
+  height: 400px;
+  width: 100%;
+  padding-bottom: 5%;
+}
+
+@media only screen {
+  #skills-h3,
+  .biopic,
+  img {
+    width: 200px;
+    display: block;
+  };
 }

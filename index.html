@@ -1,41 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <title>Your Moving Companion</title>
-    <link rel="stylesheet" href="css/style.css">
+    <!-- bootstrap framework stylesheets-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+    <!-- stylesheet for a google font. -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,500,700">
 
+    <link rel="stylesheet" href="css/style.css">
     <!-- normalize CSS pixels with device pixels for scalability -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-<body>
+  </head>
 
-    <form id="form-container" class="form-container">
-        <label for="street">Street: </label><input type="text" id="street" value="">
-        <label for="city">City: </label><input type="text" id="city" value="">
-        <button id="submit-btn">Submit</button>
-    </form>
+  <body>
+    <!-- TOP NAV OF HTE PAGE -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#Navbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#main">home</a>
+        </div>
+        <div class="collapse navbar-collapse" id="Navbar">
 
-    <hr>
+          <ul class="nav navbar-nav">
+            <li><a href="#header">Bio</a></li>
+            <li><a href="#workExperience">Work</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#mapDiv">Map</a></li>
+            <li><a href="#lets-connect">Contact</a></li>
+          </ul>
 
-    <h2 id="greeting" class="greeting">Where do you want to live?</h2>
+        </div>
+      </div>
+    </nav>
 
+    <div class="row">
+      <header class="col-md-12">
+         <form id="form-container" class="form-container">
+          <label for="street">Street: </label>
+          <input type="text" id="street" value="">
+          <label for="city">City: </label>
+          <input type="text" id="city" value="">
+          <button id="submit-btn">Submit</button>
+        </form>
 
-    <div class="wikipedia-container">
-        <h3 id="wikipedia-header">Relevant Wikipedia Links</h3>
-        <ul id="wikipedia-links">Type in an address above and find relevant Wikipedia articles here!</ul>
+        <hr>
+
+        <h2 id="greeting" class="greeting">Where do you want to live?</h2>
+
+      </header>
+    </div>
+    <div class="row">
+      <div class="col-md-1">
+        <nav class="nav navbar-inverse nav-stacked">
+          <ul>
+            <li>Item 1</li>
+            <li>Item 1</li>
+            <li>Item 1</li>
+            <li>Item 1</li>
+            <li>Item 1</li>
+            <li>Item 1</li>
+            <li>Item 1</li>
+          </ul>
+        </nav>
+      </div>
+      <div class="col-md-11">
+        <main>
+          <div id="mapDiv" class="col-md-12">
+            <h2>Places Around Town.</h2>
+          </div>
+
+          <div class="wikipedia-container">
+            <h3 id="wikipedia-header">Relevant Wikipedia Links</h3>
+            <ul id="wikipedia-links">Type in an address above and find relevant Wikipedia articles here!</ul>
+          </div>
+
+          <div class="nytimes-container">
+            <h3 id="nytimes-header">New York Times Articles</h3>
+            <ul id="nytimes-articles" class="article-list">What's going on in your new city? Enter an address and hit submit and the NY Times will tell you here!</ul>
+          </div>
+        </main>
+      </div>
     </div>
 
-
-    <div class="nytimes-container">
-        <h3 id="nytimes-header">New York Times Articles</h3>
-        <ul id="nytimes-articles" class="article-list">What's going on in your new city? Enter an address and hit submit and the NY Times will tell you here!</ul>
+    <div class="row">
+      <footer>
+        <div class="col-md-112">
+          This is hte bottom row that is the footer of the page
+        </div>
+      </footer>
     </div>
+
     <!-- LOAD JQUERY FROM CDN -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <!-- LOAD KNOCKOUT JS FROM CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.0/knockout-min.js"></script>
     <!-- LOAD CUSTOM JAVSCRIPT -->
     <script src="js/script.js"></script>
-</body>
+  </body>
 </html>

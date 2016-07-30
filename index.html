@@ -27,14 +27,10 @@
           <a class="navbar-brand" href="#main">home</a>
         </div>
         <div class="collapse navbar-collapse" id="Navbar">
-        <!-- NAV BAR LINKS -->
+
+          <!-- NAV BAR LINKS -->
           <ul class="nav navbar-nav">
-            <li><a href="#header">Bio</a></li>
-            <li><a href="#workExperience">Work</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#mapDiv">Map</a></li>
-            <li><a href="#lets-connect">Contact</a></li>
+
           </ul>
 
         </div>
@@ -43,15 +39,8 @@
 
     <div class="row">
       <header class="col-md-12">
-         <form id="form-container" class="form-container">
-          <label for="street">Street: </label>
-          <input type="text" id="street" value="">
-          <label for="city">City: </label>
-          <input type="text" id="city" value="">
-          <button id="submit-btn">Submit</button>
-        </form>
+        <h2 id="greeting" class="greeting">Best places to visit around San Antonio.</h2>
         <hr>
-        <h2 id="greeting" class="greeting">Where do you want to live?</h2>
       </header>
     </div>
 
@@ -59,11 +48,12 @@
       <div class="col-md-12">
         <main>
           <div class="row">
-            <div id="leftNav" class="col-md-1">
-              Left NAV for places around town and search filter.
+            <div id="leftNav" class="left-nav flex-box col-md-1 navbar-inverse">
+              <input id="placeSearch" class="search-box" type="text" placeholder="Search Locations" data-bind = "value: searchInput, valueUpdate: 'afterkeydown'">
+              Places
+              PLACE
             </div>
             <div id="mapDiv" class="col-md-11">
-              <h2>Places Around Town.</h2>
             </div>
           </div>
           <div class="row">
@@ -71,14 +61,14 @@
               <div class="nytimes-container">
                 <h3 id="nytimes-header">New York Times Articles</h3>
                 <ul id="nytimes-articles" class="article-list">
-                  What's going on in your new city? Enter an address and hit submit and the NY Times will tell you here!
+                  What's going on in San Antonio?
                 </ul>
               </div>
             </div>
             <div class="col-md-1">
               <div class="wikipedia-container">
                 <h3 id="wikipedia-header">Relevant Wikipedia Links</h3>
-                <ul id="wikipedia-links">Type in an address above and find relevant Wikipedia articles here!</ul>
+                <ul id="wikipedia-links">Click on a map marker above and find relevant Wikipedia articles here!</ul>
               </div>
             </div>
           </div>

@@ -1,0 +1,25 @@
+{
+  "places": [
+    {
+      "name": "Enchanted Rock",
+      "address": "16710 Ranch Road 965",
+      "city": "Fredericksburg",
+      "state": "TX",
+      "zip": "78624"
+    },
+    {
+      "name": "Majestic Theatre",
+      "address": "224 E. Houston St.",
+      "city": "San Antonio",
+      "state": "TX",
+      "zip": "78205"
+    },
+    {
+      "name": "Tower of the Americas",
+      "address": "600 Hemisfair Plaza Way",
+      "city": "San Antonio",
+      "state": "TX",
+      "zip": "78205"
+    }
+  ]
+}

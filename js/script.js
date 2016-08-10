@@ -1,12 +1,25 @@
 
-function loadData() {
+var places = ko.observableArray();
+var placeName = ko.observable();
+
+
+function loadModel() {
+  $.getJSON("/some/url", function(data) {
+    var placesJSON = data.places;
+    for (var i = 0; i < placesJSON.length; i++) {
+      places.push(data.i);
+    };
+  });
+}
+
+// defines the interaction of the business logic between the view and the model
+function viewModel() {
 
   // The leading $ denotes that the variable is a pointer to a JQuery object
   var $body = $('body');
   var $wikiElem = $('#wikipedia-links');
   var $nytHeaderElem = $('#nytimes-header');
   var $nytElem = $('#nytimes-articles');
-  var $greeting = $('#greeting');
 
   // clear out old data before new request
   $wikiElem.text("");
@@ -24,7 +37,7 @@ function loadData() {
   // NEW YORK TIMES AJAX REQUEST
   var nytArticleApiKey = '73ab354a5a8949f68092bd129e01edbe';
   var nyTimesUrl = 'https://api.nytimes.com/svc/search/v2/articlesearch.json?' +
-                   'q=' + cityStr + '&sort=newest&api-key=' + nytArticleApiKey + '';
+                   'q=' + placeName + '&sort=newest&api-key=' + nytArticleApiKey + '';
   $.getJSON(nyTimesUrl, function(data) {
     // set header for New York Times articles
     $nytHeaderElem.text('New York Times articles about ' + cityStr +'.');
@@ -214,7 +227,7 @@ function initializeMap() {
       content: name
     });
 
-    // event listener for the click on the location
+    // event listener for the click on the location marker
     google.maps.event.addListener(marker, 'click', function() {
       infoWindow.open(map, marker);
     });

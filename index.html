@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>Your Moving Companion</title>
+    <title>Best Places to visit Around San ANtonio.</title>
     <!-- bootstrap framework stylesheets-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
@@ -28,7 +28,7 @@
         </div>
         <div class="collapse navbar-collapse" id="Navbar">
 
-          <!-- NAV BAR LINKS -->
+          <!-- TOP NAV BAR LINKS -->
           <ul class="nav navbar-nav">
 
           </ul>
@@ -50,10 +50,12 @@
           <div class="row">
             <div id="leftNav" class="left-nav flex-box col-md-1 navbar-inverse">
               <input id="placeSearch" class="search-box" type="text" placeholder="Search Locations" data-bind = "value: searchInput, valueUpdate: 'afterkeydown'">
-              Places
-              PLACE
+              <div class="placeList" data-bind="foreach:placeList">
+                <span class = "place-name" data-bind="text: place.title"></span>
+              </div>
             </div>
             <div id="mapDiv" class="col-md-11">
+
             </div>
           </div>
           <div class="row">
@@ -79,7 +81,7 @@
     <div class="row">
       <footer>
         <div class="col-md-12">
-          This is the bottom row that is the footer of the page
+          <span>Locations adapted from: <a href="http://www.sanantoniomag.com/SAM/January-2013/52-Things-Every-San-Antonian-Must-Do/">52 Things Every San Antonian Must Do!</a></span>
         </div>
       </footer>
     </div>

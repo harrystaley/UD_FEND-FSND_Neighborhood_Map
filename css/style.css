@@ -34,7 +34,7 @@ body {
 }
 
 .input input {
-    width: 90%;
+    width: 100%;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -220,6 +220,11 @@ img {
 
 span {
   padding: 5px;
+}
+
+footer {
+  padding: 10px;
+  display: block;
 }
 
 #lets-connect {

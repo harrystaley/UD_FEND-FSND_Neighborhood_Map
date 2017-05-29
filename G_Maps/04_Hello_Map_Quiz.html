@@ -4,8 +4,14 @@ API Course, Lesson 1 -->
  <head>
  <!-- styles put here, but you can include a CSS file and reference it instead! -->
    <style type="text/css">
-     html, body { height: 100%; margin: 0; padding: 0; }
-     #map { height: 100%; }
+     html, body { 
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+     #map { 
+      height: 100%;
+    }
    </style>
  </head>
  <body>
@@ -15,17 +21,25 @@ API Course, Lesson 1 -->
      var map; 
      function initMap() {
        // constructor to create a new map JS object.
-       map = google.maps.Map(document.getElementById('map') {
+       map = new google.maps.Map(document.getElementById('map'), {
             // specify the point on the earth to center on by giving the lattitude and longitude.
+            // Center and zoom are required.
             center: {lat: 40.7413549, lng: -73.99802439999996},
             // specify a zoom level from 1 to 21
             zoom: 13
-          }
-        );
-     }
+          });
+      
+      var tribeca = {lat: 40.719526, lng: -74.0089934};
+      var marker = new google.maps.Marker({
+        position: tribeca,
+        map: map,
+        title: 'first marker!'
+      });
+    }
    </script>
    <!-- Load the JS API ASYNCHRONOUSLY below.-->
-   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSkuCJimrMS1mm2wJsGqPz8k6dkBRPOHE&v=3&callback=initmap">
+   <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSkuCJimrMS1mm2wJsGqPz8k6dkBRPOHE&v=3&callback=initMap">
    </script>
  </body>
 </html>

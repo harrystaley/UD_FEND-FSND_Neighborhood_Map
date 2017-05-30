@@ -1,11 +1,11 @@
 {
   "places": [
     {
-      "name": "Enchanted Rock",
-      "address": "16710 Ranch Road 965",
-      "city": "Fredericksburg",
+      "name": "The Menger Hotel",
+      "address": "204 Alamo Plaza",
+      "city": "San Antonio",
       "state": "TX",
-      "zip": "78624"
+      "zip": "78205"
     },
     {
       "name": "Majestic Theatre",
@@ -20,6 +20,20 @@
       "city": "San Antonio",
       "state": "TX",
       "zip": "78205"
+    },
+    {
+      "name": "The Alamo",
+      "address": "300 Alamo Plaza",
+      "city": "San Antonio",
+      "state": "TX",
+      "zip": "78205"
+    },
+    {
+      "name": "The Guenther House",
+      "address": "205 E Guenther",
+      "city": "San Antonio",
+      "state": "TX",
+      "zip": "78204"
     }
   ]
 }

@@ -1,51 +1,56 @@
-# Udacity Front End and Full Stack Web Developer Nanodegrees
-## Project: Neighborhood Map
+# UD_FEND-FSND_Neighborhood_Map
 
-### PROJECT SPECIFICATIONS
-as of July 2016
+## Project Overview
 
-Interface Design
+Welcome to the "Neighborhood Map" project, a part of Udacity's Front End and Full Stack Web Developer Nanodegrees. This project is centered around creating a responsive, user-friendly web application that is compatible across modern devices. The application is a neighborhood map that allows users to explore different locations and gather information about them.
 
-| CRITERIA       | MEETS SPECIFICATIONS                                                                     |
-|----------------|------------------------------------------------------------------------------------------|
-| Responsiveness | All application components render on-screen in a responsive manner.                      |
-| Usability      | All application components are usable across modern desktop, tablet, and phone browsers. |
+This project is a reflection of the structured learning approach provided by Udacity's curriculum, focusing on developing practical skills that are relevant in today's tech industry.
 
-App Functionality
+## Setup and Installation
 
-| CRITERIA                        | MEETS SPECIFICATIONS                                                                                                                                                                                                                                                                                                                                                              |
-|---------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Filter Locations via Text Input | Includes a text input field that filters the map markers and list items to locations matching the text input. Filter function runs error-free.                                                                                                                                                                                                                                    |
-| List View                       | A list-view of location names is provided which displays all locations by default, and displays the filtered subset of locations when a filter is applied.Clicking a location on the list displays unique information about the location, and animates its associated map marker (e.g. bouncing, color change.)List functionality is responsive and runs error free.              |
-| Map and Markers                 | Map displays all location markers by default, and displays the filtered subset of location markers when a filter is applied.Clicking a marker displays unique information about a location in either an infoWindow or DOM element.Markers should animate when clicked (e.g. bouncing, color change.)Any additional custom functionality provided in the app functions error-free. |
+To set up this project on your local machine, follow the steps below:
 
-App Architecture
+1. Clone the repository to your local machine.
 
-| CRITERIA               | MEETS SPECIFICATIONS                                                                                                                                                                                                                                                                                                       |
-|------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Proper Use of Knockout | Code is properly separated based upon Knockout best practices (follow an MVVM pattern, avoid updating the DOM manually with jQuery or JS, use observables rather than forcing refreshes manually, etc). Knockout should not be used to handle the Google Map API.  There are at least 5 locations hard-coded in the model. |
+```bash
+git clone https://github.com/your-username/UD_FEND-FSND_Neighborhood_Map.git
+```
 
-Asynchronous Data Usage
+2. Navigate into the project directory.
 
-| CRITERIA                  | MEETS SPECIFICATIONS                                                                                                                                                                                                                                                                                                                                                                       |
-|---------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Asynchronous API Requests | Application utilizes the Google Maps API and at least one non-Google third-party API. Refer to this documentation. All data requests are retrieved in an asynchronous manner.                                                                                                                                                                                                              |
-| Error Handling            | Data requests that fail are handled gracefully using common fallback techniques (i.e. AJAX error or fail methods). 'Gracefully' means the user isn’t left wondering why a component isn’t working. If an API doesn’t load there should be some visible indication on the page (an alert box is ok) that it didn’t load. Note: You do not need to handle cases where the user goes offline. |
+```bash
+cd UD_FEND-FSND_Neighborhood_Map
+```
 
-Location Details Functionality
+3. Install the required dependencies.
 
-| CRITERIA                 | MEETS SPECIFICATIONS                                                                                                                                                                                                                                                                                                                                                                                                  |
-|--------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Additional Location Data | Functionality providing additional data about a location is provided and sourced from a 3rd party API. Information can be provided either in the marker’s infoWindow, or in an HTML element in the DOM (a sidebar, the list view, etc.) Provide attribution for the source of additional data. For example, if using Foursquare, indicate somewhere in your UI and in your README that you are using Foursquare data. |
-| Error Free               | Application runs without errors.                                                                                                                                                                                                                                                                                                                                                                                      |
-| Usability                | Functionality is presented in a usable and responsive manner.                                                                                                                                                                                                                                                                                                                                                         |
+```bash
+npm install
+```
 
-Documentation
+4. Start the application.
 
-| CRITERIA     | MEETS SPECIFICATIONS                                                                                                       |
-|--------------|----------------------------------------------------------------------------------------------------------------------------|
-| README       | A README file is included detailing all steps required to successfully run the application.                                |
-| Comments     | Comments are present and effectively explain longer code procedures.                                                       |
-| Code Quality | Code is formatted with consistent, logical, and easy-to-read formatting as described in the Udacity JavaScript Style Guide |
+```bash
+npm start
+```
 
+The application will start running on `http://localhost:3000`.
 
+## Usage Examples
+
+Once you have the application running, you can explore different locations on the map. Click on any marker to display information about the location. You can filter the displayed locations using the search bar at the top of the page.
+
+## Contribution Guidelines
+
+Contributions are always welcome. If you'd like to contribute, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch with a descriptive name.
+3. Make changes or additions in your branch.
+4. Submit a pull request detailing the changes made.
+
+Please ensure your contributions adhere to the existing coding style for consistency.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
